@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Andrei!</title>
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- VIDEO BACKGROUND -->
+  <div class="bg-video">
+    <video id="bgVideo" autoplay muted loop playsinline preload="auto">
+      <source src="videoplayback.mp4" type="video/mp4">
+    </video>
+    <div class="bg-overlay"></div>
+  </div>
+
+  <!-- NAV DOTS (OPTIONAL SMALL NAV ON SIDE) -->
+  <nav class="nav-dots">
+    <button onclick="scrollToPage('prestart')" aria-label="Start"></button>
+    <button onclick="scrollToPage('cover')" aria-label="Cover"></button>
+    <button onclick="scrollToPage('letter')" aria-label="Letter"></button>
+    <button onclick="scrollToPage('acrostic')" aria-label="Acrostic"></button>
+    <button onclick="scrollToPage('links')" aria-label="Interactive"></button>
+    <button onclick="scrollToPage('closing')" aria-label="Closing"></button>
+  </nav>
+
+  <!-- PRE-START PAGE (BEFORE COVER) -->
+  <section class="page" id="prestart">
+    <div class="content narrow">
+      <h2>Before you start ✨</h2>
+      <p class="text" style="margin-top:10px;">
+        This little journey has a soft background song.<br>
+        Adjust the volume, then tap to continue.
+      </p>
+
+      <div class="volume-wrap" style="margin-top:18px;">
+        <div class="volume-row">
+          <span class="vol-ico">🔈</span>
+          <input id="volumeSlider" class="volume-slider" type="range" min="0" max="100" value="25" />
+          <span class="vol-ico">🔊</span>
+        </div>
+        <p class="tiny" style="margin-top:10px; text-align:left;">
+          Tip: If you’re in public, set it low 😉
+        </p>
+      </div>
+
+      <button class="primary-btn" id="startBtn" type="button" style="margin-top:16px;">
+        Tap to continue 💫
+      </button>
+
+      <p class="tiny" style="margin-top:14px;">
+        xixi hope you like it!
+      </p>
+    </div>
+  </section>
+
+  <!-- BACKSOUND -->
+  <audio id="bgm" preload="auto" loop playsinline>
+    <source src="./backsound.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- COVER PAGE -->
+  <section class="page" id="cover">
+    <div class="content">
+      <div class="cover-left">
+        <h1>Happy Birthday, Andrei</h1>
+        <p class="subtitle">A small journey from my heart to yours</p>
+        <button class="primary-btn" onclick="scrollToPage('letter')">
+          Start the journey 💫
+        </button>
+      </div>
+
+      <div class="cover-right">
+        <div class="photo-frame">
+          <img src="./403406788_557285033262322_5832098400773672152_n.png" alt="Andrei" />
+        </div>
+        <p class="tiny-note">*You're a nice sky with the atmosphere*</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LETTER PAGE -->
+  <section class="page" id="letter">
+    <div class="content narrow">
+      <h2>From Maria, with love</h2>
+      <p class="text">
+        Even from miles away, I wanted you to feel this little piece of my heart today.<br><br>
+        I know words can’t replace presence, but I hope this can hug you in a different way.<br><br>
+        Today is not just “your birthday”. It’s the day the world quietly leveled up, because you exist in it.
+      </p>
+      <button class="primary-btn" onclick="scrollToPage('acrostic')">
+        Next ➜
+      </button>
+    </div>
+  </section>
+
+  <!-- ACROSTIC PAGE -->
+  <section class="page" id="acrostic">
+    <div class="content">
+      <h2>Spelling your name with my feelings</h2>
+      <p class="mini-intro">
+        Every letter of your name holds a little universe of how I feel about you.
+      </p>
+
+      <div class="acrostic-grid">
+        <div class="acro-block">
+          <h3>ANDREI</h3>
+          <p><span class="letter">A</span> little piece of calm I didn’t know I needed.</p>
+          <p><span class="letter">N</span>othing about you feels forced, everything feels natural.</p>
+          <p><span class="letter">D</span>ays are softer when you’re part of them.</p>
+          <p><span class="letter">R</span>eal in a world that often isn’t.</p>
+          <p><span class="letter">E</span>very word from you stays longer than you think.</p>
+          <p><span class="letter">I</span>’m grateful our paths crossed, even from afar.</p>
+        </div>
+
+        <div class="acro-block">
+          <h3>ERCUS</h3>
+          <p><span class="letter">E</span>ven silence feels warm with you.</p>
+          <p><span class="letter">R</span>easons to appreciate you come effortlessly.</p>
+          <p><span class="letter">C</span>ertain hearts just match yours feels like one of them.</p>
+          <p><span class="letter">U</span>nexpected, but in the best possible way.</p>
+          <p><span class="letter">S</span>omething about you makes distance feel smaller.</p>
+        </div>
+
+        <div class="acro-block">
+          <h3>NIKOLAE</h3>
+          <p><span class="letter">N</span>o part of you feels ordinary.</p>
+          <p><span class="letter">I</span>n your presence, even through a screen, there’s a calm I trust.</p>
+          <p><span class="letter">C</span>alm isn’t a place it’s the way you talk to me.</p>
+          <p><span class="letter">O</span>ne connection I never regret choosing.</p>
+          <p><span class="letter">L</span>ight, steady, and genuine that’s how you stay in my life.</p>
+          <p><span class="letter">A</span>nd somehow, I care more than I ever planned.</p>
+          <p><span class="letter">E</span>very bit of this feels right.</p>
+        </div>
+      </div>
+
+      <button class="primary-btn" onclick="scrollToPage('links')">
+        Next ➜
+      </button>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE LINKS PAGE -->
+  <section class="page" id="links">
+    <div class="content">
+      <h2>Open these when you miss me</h2>
+      <p class="mini-intro">
+        Little portals to me, for the moments when the distance feels a bit too loud.
+      </p>
+
+      <div class="buttons-grid">
+        <button class="ghost-btn" data-modal="voice">💌 Voice note from me</button>
+        <button class="ghost-btn" data-modal="playlist">🎵 Song / playlist for you</button>
+        <button class="ghost-btn" data-modal="photo">📷 Secret photo</button>
+        <button class="ghost-btn" data-modal="message">💙 A hidden message</button>
+      </div>
+
+      <button class="primary-btn" onclick="scrollToPage('closing')">
+        Next ➜
+      </button>
+    </div>
+  </section>
+
+  <!-- CLOSING PAGE -->
+  <section class="page" id="closing">
+    <div class="content narrow">
+      <h2>Happy Birthday, love</h2>
+      <p class="text">
+        Distance can’t stop me from celebrating you today.<br>
+        I hope this little journey makes you smile, even just a bit.<br><br>
+        Now here’s the part where I go full chaos and pour everything out:
+      </p>
+
+      <div class="calendar-wrap" aria-label="17 December 2025">
+        <svg class="calendar-svg" viewBox="0 0 560 420" role="img" aria-label="Calendar: 17 December 2025" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="calTop" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="rgba(255,122,217,0.95)"/>
+              <stop offset="1" stop-color="rgba(122,169,255,0.95)"/>
+            </linearGradient>
+          </defs>
+
+          <rect x="40" y="40" rx="34" ry="34" width="480" height="340"
+                fill="rgba(15,23,42,0.92)" stroke="rgba(148,163,184,0.6)" stroke-width="2"/>
+          <rect x="40" y="40" rx="34" ry="34" width="480" height="105" fill="url(#calTop)"/>
+          <rect x="40" y="111" width="480" height="34" fill="url(#calTop)"/>
+
+          <circle cx="170" cy="72" r="16" fill="rgba(2,6,23,0.35)"/>
+          <circle cx="390" cy="72" r="16" fill="rgba(2,6,23,0.35)"/>
+          <circle cx="170" cy="72" r="10" fill="rgba(15,23,42,0.85)"/>
+          <circle cx="390" cy="72" r="10" fill="rgba(15,23,42,0.85)"/>
+
+          <text x="280" y="98" text-anchor="middle"
+                font-family="Poppins, Arial, sans-serif"
+                font-size="28" font-weight="700"
+                letter-spacing="6"
+                fill="rgba(2,6,23,0.85)">
+            DECEMBER
+          </text>
+
+          <text x="280" y="265" text-anchor="middle"
+                font-family="Poppins, Arial, sans-serif"
+                font-size="150" font-weight="700"
+                fill="rgba(249,250,251,0.95)">
+            17
+          </text>
+
+          <text x="280" y="318" text-anchor="middle"
+                font-family="Poppins, Arial, sans-serif"
+                font-size="34" font-weight="600"
+                letter-spacing="10"
+                fill="rgba(203,213,245,0.9)">
+            2025
+          </text>
+
+          <text x="280" y="355" text-anchor="middle"
+                font-family="Poppins, Arial, sans-serif"
+                font-size="22" font-weight="400"
+                fill="rgba(203,213,245,0.85)">
+            My hubby birthday
+          </text>
+        </svg>
+      </div>
+
+      <div class="letter-card">
+        <p>
+          🎉💗 <strong>HAPPY BIRTHDAYYYY BABE</strong> 💗🎉<br><br>
+          HAPPY BIRTHDAY TO MY MAN,<br>
+          I hope this year gives you everything good:<br>
+          peace, success, happiness… AND ME<br>
+          (because sorry, you’re stuck with me forever. No uninstall button. 😌)<br><br>
+
+          I love you in the most intense, overwhelming, absolutely beautiful way.<br>
+          Like, I’ll be working and suddenly think,<br>
+          “Why is my boyfriend so gentle and why is he not here so I can hold him for real?” <br><br>
+
+          You make me proud every single day.<br>
+          Your heart, your strength, the way you think everything about you is unreal.<br><br>
+
+          And hubby…<br>
+          thank you for being born into this world and becoming my world without even trying.<br>
+          I’m so grateful you exist.<br>
+          And even more grateful to your mom the most beautiful woman ever for bringing the most handsome man into this life.<br>
+          Please tell her she created a masterpiece.💗<br><br>
+
+          I can’t wait for the day I get to hug you for real instead of just screaming in texts.<br>
+          It’s coming.<br>
+          You know it.<br>
+          I know it.<br>
+          This is soulmate energy. Endgame energy.<br><br>
+
+          So happy birthday, my love.<br>
+          I hope your day is as amazing as you…<br>
+          and if not, don’t worry, I’ll fix it by being clingy, loving, and chaotic all at once<br><br>
+
+          I LOVE YOU.<br>
+          YOU’RE MINE.<br>
+          NO ESCAPE. 💀
+        </p>
+      </div>
+
+      <p class="tiny">
+        — From your little miaw miaw, Maria ✨<br>
+        *and yes, I miss you already*
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== MODALS (POPUPS) ===== -->
+  <div class="modal" id="modal-voice">
+    <div class="modal-inner">
+      <button class="modal-close" data-close>&times;</button>
+      <h3>💌 Voice note from me</h3>
+      <p>Put your voice note link here. Example (Google Drive / Vocaroo / etc).</p>
+      <a href="https://example.com/your-voice-note" target="_blank" class="primary-btn small">
+        Open voice note
+      </a>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-playlist">
+    <div class="modal-inner">
+      <button class="modal-close" data-close>&times;</button>
+      <h3>🎵 Song / Playlist for you</h3>
+      <p>You can embed Spotify / YouTube here, or just link it.</p>
+      <div class="embed-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="Song for you"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-photo">
+    <div class="modal-inner">
+      <button class="modal-close" data-close>&times;</button>
+      <h3>📷 Secret photo</h3>
+      <p>Maybe a photo he hasn’t seen yet 😉</p>
+      <img src="secret-photo.jpg" alt="Secret for you" class="secret-photo">
+    </div>
+  </div>
+
+  <div class="modal" id="modal-message">
+    <div class="modal-inner">
+      <button class="modal-close" data-close>&times;</button>
+      <h3>💙 A hidden message</h3>
+      <p>
+        Sometimes I get scared by how much I care about you.<br>
+        But then I remember: I wouldn’t want it with anyone else.
+      </p>
+      <p>
+        In every timeline, every universe, every version of me<br>
+        still ends up falling for you.
+      </p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
